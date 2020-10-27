@@ -1,5 +1,13 @@
 # laminas-mvc-skeleton
 
+## Test installation
+
+```bash
+git clone git@github.com:kpicaza/laminas-mvc-test.git
+git submodule sync
+git submodule update --init
+```
+
 ## Introduction
 
 This is a skeleton application using the Laminas MVC layer and module
