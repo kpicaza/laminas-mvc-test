@@ -1,0 +1,76 @@
+{
+    "name": "laminas/laminas-mvc-skeleton",
+    "description": "Laminas MVC Skeleton Application",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "mvc",
+        "skeleton",
+        "framework"
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/laminas-component-installer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "laminas/laminas-component-installer": "@dev",
+        "laminas/laminas-development-mode": "^3.2",
+        "laminas/laminas-mvc": "^3.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "module/Application/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApplicationTest\\": "module/Application/test/"
+        }
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "development-disable": "laminas-development-mode disable",
+        "development-enable": "laminas-development-mode enable",
+        "development-status": "laminas-development-mode status",
+        "post-create-project-cmd": [
+            "@development-enable",
+            "php bin/update-gitignore.php"
+        ],
+        "serve": "php -S 0.0.0.0:8080 -t public",
+        "test": "phpunit"
+    },
+    "require-dev": {
+        "laminas-api-tools/api-tools": "^1.4",
+        "infection/infection": "^0.18.2",
+        "ramsey/uuid": "^4.0"
+    },
+    "extra": {
+        "laminas": {
+            "component-whitelist": [
+                "antidot-fw/logger",
+                "antidot-fw/event-dispatcher",
+                "laminas/laminas-httphandlerrunner",
+                "laminas/laminas-diactoros",
+                "laminas/laminas-paginator",
+                "laminas/laminas-db",
+                "laminas/laminas-hydrator",
+                "laminas/laminas-filter",
+                "laminas/laminas-inputfilter",
+                "laminas-api-tools/api-tools",
+                "laminas-api-tools/api-tools-hal",
+                "laminas-api-tools/api-tools-rest",
+                "laminas-api-tools/api-tools-content-validation",
+                "laminas-api-tools/api-tools-mvc-auth",
+                "laminas-api-tools/api-tools-rpc",
+                "laminas-api-tools/api-tools-api-problem",
+                "laminas-api-tools/api-tools-content-negotiation",
+                "laminas-api-tools/api-tools-versioning"
+            ]
+        }
+    }
+}

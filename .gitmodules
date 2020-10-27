@@ -1,0 +1,3 @@
+[submodule "packages/laminas-component-installer"]
+	path = packages/laminas-component-installer
+	url = git@github.com:kpicaza/laminas-compoent-installer

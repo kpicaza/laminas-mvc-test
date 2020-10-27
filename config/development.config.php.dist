@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @see       https://github.com/laminas/laminas-mvc-skeleton for the canonical source repository
+ * @copyright https://github.com/laminas/laminas-mvc-skeleton/blob/master/COPYRIGHT.md
+ * @license   https://github.com/laminas/laminas-mvc-skeleton/blob/master/LICENSE.md New BSD License
+ */
+
+return [
+    // Additional modules to include when in development mode
+    'modules' => [
+        'Laminas\InputFilter',
+        'Laminas\Hydrator',
+        'Laminas\Filter',
+        'Laminas\Db',
+        'Laminas\Validator',
+        'Laminas\Paginator',
+        'Laminas\ApiTools\Versioning',
+        'Laminas\ApiTools\ApiProblem',
+        'Laminas\ApiTools\ContentNegotiation',
+        'Laminas\ApiTools\Rpc',
+        'Laminas\ApiTools\MvcAuth',
+        'Laminas\ApiTools\Hal',
+        'Laminas\ApiTools\Rest',
+        'Laminas\ApiTools\ContentValidation',
+        'Laminas\ApiTools',
+    ],
+    // Configuration overrides during development mode
+    'module_listener_options' => [
+        'config_glob_paths' => [realpath(__DIR__) . '/autoload/{,*.}{global,local}-development.php'],
+        'config_cache_enabled' => false,
+        'module_map_cache_enabled' => false,
+    ],
+];
